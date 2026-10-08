@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(109, 211, 208, 0.95);
+    padding: 20px 40px;
+    box-shadow: 0 9px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-buttons a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 3px solid black;
+}
+
+.consultation-button {
+    position: relative;
+    background-color: black;
+    color: #6dd3d0 !important;
+    padding: 23px 25px !important;
+    border: 5px solid black !important;
+    border-radius: 999px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.consultation-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: #6dd3d0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+
+    z-index: -1;
+}
+
+.consultation-button:hover {
+    color: black !important;
+}
+
+.consultation-button:hover::before {
+    transform: scaleX(1);
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.06);
+}
+
+.linkedin-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0 !important;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.linkedin-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: #0a66c2;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+
+    z-index: 1;
+}
+
+.linkedin-button span {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Century Gothic", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.linkedin-button:hover span {
+    color: white;
+}
+
+.linkedin-button:hover::before {
+    transform: scaleX(1);
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 40px;
+}
+
+.hero-content p:nth-of-type(2) {
+    margin-top: 45px;
+    margin-bottom: 35px;
+    transform: translateX(60px);
+}
+
+.hero-content p:nth-of-type(3) {
+    transform: translateX(250px);
+}
+
+/* SPECIAL EDUCATION SECTION */
+
+.special-education {
+    position: relative;
+    background-color: #6dd3d0;
+    min-height: 500px;
+}
+
+.section-divider {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.section-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.special-education-content {
+    position: relative;
+    padding: 80px 40px;
+}
+
+.special-education-content h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 48px;
+}
