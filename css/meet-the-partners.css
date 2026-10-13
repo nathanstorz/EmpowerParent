@@ -1,0 +1,194 @@
+/* PAGE */
+
+.mtp-page {
+    background-color: #f3f2ef;
+    padding: 40px 0 60px;
+}
+
+.mtp-title {
+    margin: 0 0 20px;
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* TWO-COLUMN LAYOUT (both columns end up the same height) */
+
+.mtp-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* was 1fr 1fr */
+    gap: 40px;
+    align-items: stretch;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* LEFT: STACKED PROFILE CARDS */
+
+.mtp-profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mtp-card {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 0px 20px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* NAME ABOVE PHOTO */
+
+.mtp-photo-col {
+    flex-shrink: 0;
+    width: 220px;
+    text-align: center;
+}
+
+.mtp-photo-col h2 {
+    margin: 0 0 12px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+/* turquoise bar under each name */
+.mtp-photo-col h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 7px;
+    margin: 8px auto 0;
+    background-color: #a0f2e7;
+    border: 2px solid black;
+    border-radius: 999px;
+}
+
+.mtp-photo-col img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border: 2px solid black;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* BULLETS */
+
+.mtp-card-text {
+    flex: 1;
+}
+
+.mtp-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.mtp-card li {
+    margin-bottom: 8px;
+}
+
+.mtp-joan .mtp-photo-col h2 {
+    font-size: 20px;   /* her name */
+}
+
+.mtp-joan ul {
+    font-size: 21px;   /* her bullets */
+}
+
+.mtp-joan li {
+    margin-bottom: 18px;   /* space between her bullets */
+}
+
+/* RIGHT: DESCRIPTION BOX */
+
+.mtp-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centers the text if the box is taller than the text */
+    padding: 40px 44px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+.mtp-description p {
+    margin: 0 0 20px;
+    font-family: Georgia, serif;
+    font-size: 21px;   /* tune this so the text fills the box */
+    line-height: 1.55;
+}
+
+.mtp-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* PHONES */
+
+@media (max-width: 900px) {
+    .mtp-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mtp-page {
+        padding: 40px 0 40px;
+    }
+
+    .mtp-title {
+        font-size: 38px;
+    }
+
+    .mtp-card {
+        flex-direction: column;
+        padding: 28px 22px;
+        gap: 24px;
+    }
+
+    .mtp-photo-col {
+        order: -1;          /* photo column on top for both cards */
+        width: 220px;
+        max-width: 100%;
+    }
+
+    .mtp-card-text {
+        flex: none;
+        width: 100%;
+    }
+
+    .mtp-card ul {
+        text-align: left;
+    }
+
+    .mtp-joan ul {
+        font-size: 17px;    /* undo Joan's desktop size on phones */
+    }
+
+    .mtp-joan li {
+        margin-bottom: 8px;
+    }
+
+    .mtp-description {
+        padding: 28px 22px;
+    }
+
+    .mtp-description p {
+        font-size: 18px;
+    }
+}

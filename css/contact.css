@@ -1,0 +1,33 @@
+/* CONTACT PAGE: same form as home, on off-white */
+
+.contact-section {
+    background-color: #f3f2ef;   /* off-white instead of turquoise */
+    min-height: 0;
+}
+
+.contact-section .consultation-content {
+    padding: 30px 8% 90px;       /* no wave on this page, so less top space */
+}
+
+/* the page title is an h1 here, styled like the home page's h2 */
+.contact-section .consultation-content h1 {
+    margin: 0 0 16px;
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-section .consultation-intro {
+    margin-bottom: 20px;         /* more breathing room above the card */
+}
+
+@media (max-width: 768px) {
+    .contact-section .consultation-content {
+        padding: 40px 5% 60px;
+    }
+
+    .contact-section .consultation-content h1 {
+        font-size: 36px;
+    }
+}

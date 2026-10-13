@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Partners in Educational Advocacy</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <img src="assets/images/PEA_logo.png" alt="Partners in Educational Advocacy">
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="special-education-services.html">Special Education Services</a>
+                <a href="meet-the-partners.html">Meet The Partners</a>
+                <a href="concerns-checklist.html">Concerns Checklist</a>
+                <a href="#">Testimonials</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+            </nav>
+
+            <div class="header-buttons">
+                <a href="https://www.linkedin.com/company/partners-in-educational-advocacy/" class="linkedin-button"
+                    target="_blank" rel="noopener"
+                    aria-label="Partners in Educational Advocacy on LinkedIn (opens in a new tab)">
+                    <span>in</span>
+                </a>
+                <a href="contact.html" class="consultation-button">Free Consultation</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="page-content">
+
+        <section class="consultation-section contact-section">
+
+            <div class="consultation-content">
+
+                <h1>Free Consultation</h1>
+
+                <p class="consultation-intro">
+                    Let us work together to help you to feel supported and empowered while advocating
+                    for your child's needs.
+                </p>
+
+                <div class="consultation-layout">
+
+                    <!-- LEFT SIDE: LOGO AND TAGLINE -->
+                    <div class="consultation-left">
+                        <img src="assets/images/PEA_logo.png" alt="Partners in Educational Advocacy">
+                        <p>Empowering Parents.</p>
+                        <p>Advocating for Children.</p>
+                    </div>
+
+                    <!-- RIGHT SIDE: FORM -->
+                    <form class="consultation-right" action="/api/contact" method="post" data-contact-form>
+
+                        <div class="name-fields">
+                            <div class="form-field">
+                                <label for="first-name">First Name <span>(required)</span></label>
+                                <input type="text" id="first-name" name="firstName" autocomplete="given-name" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="last-name">Last Name <span>(required)</span></label>
+                                <input type="text" id="last-name" name="lastName" autocomplete="family-name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email <span>(required)</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone">Phone <span>(required)</span></label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Message <span>(required)</span></label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <!-- Honeypot: hidden trap field for bots -->
+                        <div class="form-hp" aria-hidden="true">
+                            <label>Leave this field empty
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            </label>
+                        </div>
+
+                        <!-- Cloudflare Turnstile security check (test key, replace before going live) -->
+                        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+
+                        <button type="submit" class="consultation-submit">Submit</button>
+
+                        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer footer-teal">
+
+        <div class="footer-divider">
+            <svg viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true">
+                <!-- off-white above the wave -->
+                <path d="M0,100
+                         Q375,228 727,100
+                         T1440,100
+                         L1440,0
+                         L0,0
+                         Z" fill="#f3f2ef"></path>
+
+                <!-- black line on the wave -->
+                <path d="M0,100
+                         Q375,228 727,100
+                         T1440,100" fill="none" stroke="black" stroke-width="2" vector-effect="non-scaling-stroke">
+                </path>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+
+            <h2>Partners in Educational Advocacy</h2>
+
+            <div class="footer-emails">
+                <a href="mailto:romo@empowerparent.com">romo@empowerparent.com</a>
+                <a href="mailto:rochlin@empowerparent.com">rochlin@empowerparent.com</a>
+            </div>
+
+            <div class="footer-logos">
+
+                <div class="footer-logos-row">
+                    <img src="assets/images/NASET+Logo.webp"
+                        alt="NASET, National Association of Special Education Teachers">
+
+                    <img src="assets/images/NJALC%20Logo.png" alt="The Association of Learning Consultants, New Jersey">
+
+                    <img src="assets/images/BCASE+image.webp"
+                        alt="BCASE Certified, Board Certified Advocate in Special Education">
+                </div>
+
+                <div class="footer-logos-row">
+                    <img src="assets/images/cec_logo.svg" alt="Council for Exceptional Children">
+
+                    <img src="assets/images/NASP.png" alt="NASP, National Association of School Psychologists">
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
