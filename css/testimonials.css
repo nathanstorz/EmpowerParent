@@ -1,0 +1,99 @@
+/* css/testimonials.css */
+
+/* The whole page area (matches the Contact page spacing) */
+.tst-section {
+  background: #f3f2ef;          /* off-white page background */
+  padding: 30px 8% 90px;        /* top, left/right (percent of width), bottom */
+}
+
+.tst-container {
+  max-width: 1100px;            /* how wide the cards area can get on big screens */
+  margin: 0 auto;               /* centers it */
+}
+
+.tst-section h1 {
+  margin: 0 0 16px;             /* space under the heading */
+  font-family: Georgia, serif;
+  font-size: 48px;              /* heading size, same as the Contact title */
+  font-weight: bold;
+  text-align: center;
+}
+
+.tst-intro {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;           /* intro text size */
+  line-height: 1.5;
+  text-align: center;
+  max-width: 640px;             /* keeps the line length readable */
+  margin: 0 auto 44px;          /* space under the intro */
+}
+
+/* The grid of cards: as many 300px+ columns as fit */
+.tst-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* smallest a card can get */
+  gap: 28px;                    /* space between cards */
+}
+
+/* One testimonial card */
+.tst-card {
+  background: #fff;
+  border: 2px solid #000;       /* the black border */
+  border-radius: 18px;          /* corner roundness */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18); /* x, y, blur, color of the shadow */
+  padding: 30px 28px 26px;      /* space inside the card */
+  margin: 0;                    /* cancels the default figure margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes the name to the bottom of each card */
+}
+
+/* Big decorative opening quote mark */
+.tst-card blockquote {
+  margin: 0 0 20px;
+  position: relative;
+  padding-top: 26px;            /* room for the quote mark */
+}
+.tst-card blockquote::before {
+  content: "\201C";             /* the opening quote character */
+  position: absolute;
+  top: -14px;                   /* moves the mark up or down */
+  left: 0;
+  font-family: Georgia, serif;
+  font-size: 4.2rem;            /* size of the quote mark */
+  line-height: 1;
+  color: #a0f2e7;               /* turquoise */
+  text-shadow: 0 0 1px #000;    /* thin outline so it shows on white */
+}
+
+.tst-quote {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;            /* quote text size */
+  line-height: 1.6;             /* space between lines */
+  margin: 0;
+}
+
+.tst-attribution {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 2px solid #a0f2e7; /* turquoise line above the name */
+}
+
+/* "Loading", "coming soon" and error text */
+.tst-message {
+  grid-column: 1 / -1;          /* spans the full grid width */
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Phones and small tablets (same breakpoint as the Contact page) */
+@media (max-width: 768px) {
+  .tst-section { padding: 40px 5% 60px; }
+  .tst-section h1 { font-size: 36px; }
+  .tst-grid { grid-template-columns: 1fr; } /* one card per row */
+}
