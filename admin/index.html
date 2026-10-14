@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> <!-- keeps search engines away from this page -->
+
+    <title>Manage Testimonials | Partners in Educational Advocacy</title>
+
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+    <header class="adm-header">
+        <div class="adm-header-inner">
+            <img src="/assets/images/PEA_logo.png" alt="Partners in Educational Advocacy" class="adm-logo">
+            <a class="adm-link" href="/testimonials.html" target="_blank" rel="noopener">View public page ↗</a>
+        </div>
+    </header>
+
+    <main class="adm-main">
+
+        <h1>Manage Testimonials</h1>
+        <p class="adm-intro">
+            Add a new testimonial below, or manage the ones already here.
+            Nothing appears on the website until you confirm permission and choose to show it.
+        </p>
+
+        <!-- ADD / EDIT FORM -->
+        <section class="adm-card" aria-labelledby="adm-form-title">
+            <h2 id="adm-form-title">Add a testimonial</h2>
+
+            <form id="adm-form">
+
+                <div class="adm-field">
+                    <label for="adm-quote">What they said</label>
+                    <textarea id="adm-quote" rows="5" maxlength="2000" required></textarea>
+                </div>
+
+                <div class="adm-field">
+                    <label for="adm-attribution">Who said it</label>
+                    <input type="text" id="adm-attribution" maxlength="120" required>
+                    <p class="adm-hint">For example: "Maria T." or "Parent of a 4th grader"</p>
+                </div>
+
+                <div class="adm-check">
+                    <input type="checkbox" id="adm-permission">
+                    <label for="adm-permission">I have this person's permission to share their words on the website</label>
+                </div>
+
+                <div class="adm-check">
+                    <input type="checkbox" id="adm-published" disabled>
+                    <label for="adm-published">Show on the website now <span class="adm-hint-inline">(turns on once permission is confirmed)</span></label>
+                </div>
+
+                <div class="adm-actions">
+                    <button type="submit" class="adm-btn" id="adm-submit">Save testimonial</button>
+                    <button type="button" class="adm-btn adm-btn--outline" id="adm-cancel" hidden>Cancel</button>
+                </div>
+
+                <p class="adm-status" id="adm-status" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+
+        <!-- LIST -->
+        <section aria-labelledby="adm-list-title">
+            <h2 id="adm-list-title" class="adm-list-title">Your testimonials <span id="adm-count"></span></h2>
+            <div id="adm-list" class="adm-list">
+                <p class="adm-message">Loading…</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>
