@@ -169,6 +169,104 @@ body {
     transform: scaleX(1);
 }
 
+/* BURGER MENU BUTTON (hidden on desktop) */
+
+.menu-toggle {
+    display: none;
+}
+
+/* HEADER: PHONES AND SMALL TABLETS */
+
+@media (max-width: 1100px) {
+    .site-header {
+        padding: 12px 20px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .header-container {
+        gap: 15px;
+    }
+
+    .header-buttons {
+        order: 2;
+        margin-left: auto;
+        gap: 15px;
+    }
+
+    .consultation-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 44px;
+        height: 44px;
+        padding: 8px;
+        background: none;
+        border: 3px solid black;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        height: 3px;
+        background-color: black;
+        border-radius: 2px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: #a0f2e7;
+        border-bottom: 2px solid black;
+        box-shadow: 0 12px 7px rgba(0, 0, 0, 0.20);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 16px 20px;
+        font-size: 18px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .main-nav a::after {
+        display: none;
+    }
+
+    .main-nav a.active {
+        background-color: #f3f2ef;
+    }
+}
+
 /* HERO */
 
 .hero {
@@ -216,6 +314,37 @@ body {
 
 .hero-content p:nth-of-type(3) {
     transform: translateX(250px);
+}
+
+/* HERO: PHONES */
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        min-height: 480px;
+    }
+
+    .hero-content {
+        top: 40%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+    }
+
+    .hero-content p:nth-of-type(2) {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        transform: none;
+    }
+
+    .hero-content p:nth-of-type(3) {
+        transform: none;
+    }
 }
 
 /* SPECIAL EDUCATION SECTION */
@@ -490,6 +619,45 @@ body {
     font-weight: bold;
 }
 
+/* SERVICES: PHONES */
+
+@media (max-width: 900px) {
+    .services-content {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-content {
+        padding: 160px 5% 80px;
+    }
+
+    .services-text-bottom {
+        margin-top: 30px;
+    }
+
+    .services-heading {
+        margin-bottom: 30px;
+    }
+
+    .services-heading h2 {
+        font-size: 40px;
+    }
+
+    .services-text {
+        font-size: 18px;
+    }
+
+    .services-text h3 {
+        font-size: 28px;
+    }
+
+    .services-tagline p {
+        font-size: 26px;
+    }
+}
 
 /* KNOWLEDGE SECTION CONTENT */
 .knowledge-section {
@@ -564,6 +732,35 @@ body {
 .knowledge-closing {
     font-weight: bold;
     font-style: italic;
+}
+
+/* KNOWLEDGE: PHONES */
+
+@media (max-width: 900px) {
+    .knowledge-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .knowledge-content {
+        padding: 0 5% 60px;
+    }
+
+    .knowledge-content h2 {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    .knowledge-text {
+        font-size: 18px;
+    }
+
+    .knowledge-text h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
 }
 
 /* MEET OUR PARTNERS SECTION */
