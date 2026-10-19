@@ -17,7 +17,7 @@ function parseId(params) {
 
 // PUT /api/admin/entries/4: save changes to one testimonial
 export async function onRequestPut({ request, env, params }) {
-  const denied = requireAdmin(request, env);
+  const denied = await requireAdmin(request, env);
   if (denied) return denied;
 
   const id = parseId(params);
@@ -53,7 +53,7 @@ export async function onRequestPut({ request, env, params }) {
 
 // DELETE /api/admin/entries/4: remove one testimonial
 export async function onRequestDelete({ request, env, params }) {
-  const denied = requireAdmin(request, env);
+  const denied = await requireAdmin(request, env);
   if (denied) return denied;
 
   const id = parseId(params);

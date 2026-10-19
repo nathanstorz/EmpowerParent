@@ -11,7 +11,7 @@ const json = (body, status = 200) =>
 
 // GET /api/admin/entries: everything, drafts too
 export async function onRequestGet({ request, env }) {
-  const denied = requireAdmin(request, env);
+  const denied = await requireAdmin(request, env);
   if (denied) return denied;
 
   const { results } = await env.DB
@@ -24,7 +24,7 @@ export async function onRequestGet({ request, env }) {
 
 // POST /api/admin/entries: add one
 export async function onRequestPost({ request, env }) {
-  const denied = requireAdmin(request, env);
+  const denied = await requireAdmin(request, env);
   if (denied) return denied;
 
   let data;
