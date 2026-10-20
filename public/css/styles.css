@@ -325,11 +325,11 @@ body {
     }
 
     .hero-content {
-        top: 40%;
+        top: 20%;
     }
 
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .hero-content p {
@@ -750,6 +750,7 @@ body {
 
     .knowledge-content h2 {
         font-size: 38px;
+        margin-top: 0;
         margin-bottom: 30px;
     }
 
