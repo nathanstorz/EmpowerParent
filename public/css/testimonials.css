@@ -29,10 +29,13 @@
 }
 
 /* The grid of cards: as many 300px+ columns as fit */
+/* One column of stacked cards, all the same width */
 .tst-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* smallest a card can get */
-  gap: 28px;                    /* space between cards */
+  grid-template-columns: 1fr;   /* a single column: every card fills it, so all are equal width */
+  gap: 28px;                    /* space between the stacked cards */
+  max-width: 760px;             /* how wide the cards get on big screens */
+  margin: 0 auto;               /* centers the column on the page */
 }
 
 /* One testimonial card */
