@@ -345,7 +345,7 @@ body {
 
     /* "Advocating for Children": nudged right by two steps (double) */
     .hero-content p:nth-of-type(3) {
-        transform: translateX(24vw);
+        transform: translateX(20vw);
     }
 }
 
