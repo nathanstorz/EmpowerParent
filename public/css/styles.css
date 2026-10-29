@@ -1243,9 +1243,40 @@ body {
         font-size: 18px;
     }
 
-    .footer-logos img {
-        height: 70px;
+    /* Logos on phones: 2 logos / 2 logos / 1 logo */
+    .footer-logos {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* 12 equal columns, so rows can be split like 9+3 or 5+7 */
+        gap: 14px 10px;               /* up/down gap between rows, left/right gap between logos */
+        width: 100%;
+        max-width: 420px;             /* how wide the logo area can get; raise it to widen the cards */
+        padding: 0 12px;              /* space from the screen edges */
+        box-sizing: border-box;
     }
+
+    /* Dissolve the two row wrappers so all 5 logos sit directly in the grid */
+    .footer-logos-row {
+        display: contents;
+    }
+
+    .footer-logos img {
+        width: 100%;                  /* fill its grid cell (was auto) */
+        height: 78px;                 /* card height (was 70px); raise for bigger logos */
+        padding: 8px;                 /* space between card edge and logo (was 12px) */
+        box-sizing: border-box;
+        object-fit: contain;          /* shows the whole logo without squashing it */
+    }
+
+    /* Row 1: NASET (wide) + ALC map (narrow) = 9 + 3 columns */
+    .footer-logos img[src*="NASET"]    { grid-column: span 9; }
+    .footer-logos img[src*="NJALC"]    { grid-column: span 3; }
+
+    /* Row 2: BCASE badge + Council for Exceptional Children = 5 + 7 columns */
+    .footer-logos img[src*="BCASE"]    { grid-column: span 5; }
+    .footer-logos img[src*="cec_logo"] { grid-column: span 7; }
+
+    /* Row 3: NASP alone = all 12 columns */
+    .footer-logos img[src*="NASP"]     { grid-column: span 12; }
 }
 .site-footer.footer-teal {
     background-color: #a0f2e7;
